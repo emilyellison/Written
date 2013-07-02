@@ -6,21 +6,10 @@
         
       .thin.blue.ribbon
       
-      .third.grid
-        .double.column
-          .buffer.top.left
-            #pieces
-              - if @pieces.empty?
-                .no_pieces
-                  %p You haven't added any pieces yet.
-                  %p 
-                    To add a piece, you can click "Choose File" and select a file,
-                    or simply drag and drop a photo of it from your computer.
-              - @pieces.each do |piece|
-                = render "piece", piece: piece
+      .quarter.grid
 
         .column
-          .buffer.top.right
+          .buffer.top.left
             .grey.small.wrapper
               %h4 Add Pieces
               %p.center
@@ -34,5 +23,18 @@
                   {%=o.name%}
                   .progress
                     .bar
+        
+        .triple.column
+          .buffer.top.right
+            #pieces
+              - if @pieces.empty?
+                .no_pieces
+                  %p You haven't added any pieces yet.
+                  %p 
+                    To add a piece, you can click "Choose File" and select a file,
+                    or simply drag and drop a photo of it from your computer.
+              - @pieces.each do |piece|
+                = render "piece", piece: piece
+        
                     
         .clear
