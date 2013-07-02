@@ -6,7 +6,7 @@ $(document).ready(function() {
     
     $('.reply').click( function(e) {
       e.preventDefault();
-      var this_form = $(this).parent().parent().next().next();
+      var this_form = $(this).parent().parent().next().next().next();
       this_form.fadeIn();
     });
     

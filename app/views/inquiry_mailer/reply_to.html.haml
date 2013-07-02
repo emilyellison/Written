@@ -17,9 +17,11 @@
         From:
         Emily Ellison
         = "<#{"emily@fixitwithcode.com"}>"
-      %p
-        = @inquiry.reply
+      %p= @inquiry.reply
+      %p= pretty_date @inquiry.updated_at
+      
     %br
+    
     %h1
       Your Message:
     %div.grey.wrapper
@@ -27,6 +29,6 @@
         From:
         = @inquiry.name
         = "<#{@inquiry.email}>"
-      %p
-        = @inquiry.message
+      %p= @inquiry.message
+      %p= pretty_date @inquiry.created_at
     

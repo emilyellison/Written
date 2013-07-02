@@ -17,8 +17,8 @@
         From:
         = @inquiry.name
         = "<#{@inquiry.email}>"
-      %p
-        = @inquiry.message
+      %p= @inquiry.message
+      %p= pretty_date @inquiry.created_at
     %p
       To reply, log in to your Writ account at:
       = link_to pen_login_url, pen_login_url

@@ -9,6 +9,7 @@
     .clear
 
   %p= inquiry.message
+  %p= pretty_date inquiry.created_at
 
   - if inquiry.reply?
 
@@ -21,6 +22,7 @@
         >
       .clear
     %p= inquiry.reply
+    %p= pretty_date inquiry.updated_at
 
   - else
   
