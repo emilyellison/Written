@@ -8,6 +8,7 @@ module InquiryMacros
     end
     fill_in 'inquiry_reply', with: Faker::Lorem.paragraph
     click_button "SEND"
+    page.should_not have_selector('form')
   end
   
   def submit_invalid_reply 
