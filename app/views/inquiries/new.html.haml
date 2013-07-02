@@ -7,7 +7,7 @@
     .third.grid
     
       .double.column
-        .buffer
+        .buffer.top.left
           .grey.wrapper
             = render 'shared/form_errors', item: @inquiry
             = form_for @inquiry do |f|
@@ -20,7 +20,7 @@
               = f.submit "SEND", class: 'submit'
               
       .column
-        .buffer
+        .buffer.top.right
           %p 
             Need custom lettering?
           %p
