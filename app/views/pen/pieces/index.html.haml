@@ -1,0 +1,38 @@
+.pen
+  .pieces
+    .index      
+      .buffer
+        %h1 Pieces
+        
+      .thin.blue.ribbon
+      
+      .third.grid
+        .double.column
+          .buffer.top.left
+            #pieces
+              - if @pieces.empty?
+                .no_pieces
+                  %p You haven't added any pieces yet.
+                  %p 
+                    To add a piece, you can click "Choose File" and select a file,
+                    or simply drag and drop a photo of it from your computer.
+              - @pieces.each do |piece|
+                = render "piece", piece: piece
+
+        .column
+          .buffer.top.right
+            .grey.small.wrapper
+              %h4 Add Pieces
+              %p.center
+                Drag and drop photos
+              = render 'shared/form_errors', item: @piece
+              = form_for [ :pen, Piece.new ] do |f|
+                = f.file_field :image, multiple: true, name: "piece[image]", class: 'file_field'
+              
+              %script{ id: "template-upload", type: "text/x-tmpl" }
+                .upload
+                  {%=o.name%}
+                  .progress
+                    .bar
+                    
+        .clear

@@ -1,0 +1,29 @@
+.grey.wrapper{ id: dom_id(inquiry) }
+  .buffer.small
+    .pull-left
+      = inquiry.name
+      <
+      = mail_to inquiry.email, inquiry.email
+      >
+    .pull-right= inquiry.reply? ? 'Replied' : link_to('Reply', '#', class: 'reply').html_safe
+    .clear
+
+  %p= inquiry.message
+
+  - if inquiry.reply?
+
+    %br
+    .buffer.small
+      .pull-left
+        Emily Ellison
+        <
+        = mail_to 'emily@fixitwithcode.com', 'emily@fixitwithcode.com'
+        >
+      .clear
+    %p= inquiry.reply
+
+  - else
+  
+    = form_for [ :pen, inquiry ], html: { class: 'full' }, remote: true do |f|
+      = f.text_area :reply
+      = f.submit 'SEND', class: 'submit'

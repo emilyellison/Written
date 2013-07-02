@@ -1,0 +1,6 @@
+<% if @piece.new_record? %>
+  alert("Failed to upload piece: <%= j @piece.errors.full_messages.join(', ').html_safe %>");
+<% else %>
+  $('.no_pieces').remove();
+  $("#pieces").prepend("<%= j render(@piece) %>");
+<% end %>

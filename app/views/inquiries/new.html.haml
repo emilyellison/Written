@@ -1,0 +1,31 @@
+.inquiries
+  .new
+    .buffer
+      %h1 Contact Emily
+    .ribbon.blue.thin
+    
+    .third.grid
+    
+      .double.column
+        .buffer
+          .grey.wrapper
+            = render 'shared/form_errors', item: @inquiry
+            = form_for @inquiry do |f|
+              = f.label :name
+              = f.text_field :name
+              = f.label :email, 'E-mail Address'
+              = f.text_field :email
+              = f.label :message
+              = f.text_area :message
+              = f.submit "SEND", class: 'submit'
+              
+      .column
+        .buffer
+          %p 
+            Need custom lettering?
+          %p
+            Send me an e-mail, and I'll be in touch
+            with you shortly.
+            
+      .clear
+      

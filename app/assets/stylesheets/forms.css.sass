@@ -1,0 +1,72 @@
+.form-errors
+  background: $pink
+  padding: 20px
+  
+  p, li
+    font-size: 10pt
+    margin: 0px
+  
+form
+  margin: 0px auto
+
+input, textarea, label
+  display: block
+  font-size: 12pt
+  line-height: 22pt
+  text-align: center
+  margin: 10px 0px
+
+input, textarea
+  font-family: $normal
+  width: 95%
+  font-size: 10pt
+  border: 1px solid $grey
+  @include border-radius-4
+  @include light-grey-box-shadow
+  
+  &:focus
+    outline: none
+    border: 1px solid royalblue
+
+input.file_field
+  border: none
+
+textarea
+  height: 200px
+
+input.submit
+  @include blue-linear-gradient
+  @include transition-animation
+  @include no-box-shadow
+  color: white
+  width: 96%
+  padding: 10px 60px
+  text-align: center
+  margin: 20px 0px
+  font-size: 10pt
+  cursor: pointer
+  
+  &:hover
+    background: royalblue
+
+form.full
+  margin: 20px 10px 10px 
+  
+  input, label, textarea
+    width: 99%
+    
+  input.submit
+    width: 99.5%
+
+form.small
+  input, label, textarea
+    font-size: 10pt
+    margin: 10px 
+    width: 245px
+    border: none
+  
+  textarea
+    height: 50px
+  
+  input.submit
+    margin: 20px 10px 10px

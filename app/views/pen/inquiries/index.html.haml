@@ -1,0 +1,11 @@
+.pen
+  .inquiries
+    .index
+      .buffer
+        %h1 Messages
+      .thin.blue.ribbon
+      .buffer
+        - @inquiries.each do |inquiry|
+          = render 'inquiry', inquiry: inquiry
+        
+        = paginate @inquiries

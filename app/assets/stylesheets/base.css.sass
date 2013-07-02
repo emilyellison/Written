@@ -1,0 +1,145 @@
+$black: black
+$white: white
+$grey: #aaa
+$light_grey: #eee
+$pink: #FFCCCC
+$script: Sofia
+$normal: Quando
+
+@mixin no-box-shadow
+  box-shadow: none
+  -moz-box-shadow: none
+  -webkit-box-shadow: none
+
+@mixin light-grey-box-shadow
+  box-shadow: -1px 1px 3px $light_grey inset
+  -moz-box-shadow: -1px 1px 3px $light_grey inset
+  -webkit-box-shadow: -1px 1px 3px $light_grey inset
+
+@mixin grey-box-shadow
+  box-shadow: 0px 0px 10px $grey
+  -moz-box-shadow: 0px 0px 10px $grey
+  -webkit-box-shadow: 0px 0px 10px $grey
+
+@mixin border-radius-4
+  border-radius: 4px
+  -moz-border-radius: 4px
+  -webkit-border-radius: 4px
+
+@mixin border-radius-10
+  border-radius: 10px
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+
+@mixin blue-linear-gradient
+  background: #1e90ff
+  background: -moz-linear-gradient(left, #1e90ff 0%, #4169e1 100%)
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e90ff), color-stop(100%,#4169e1))
+  background: -webkit-linear-gradient(left, #1e90ff 0%,#4169e1 100%)
+  background: -o-linear-gradient(left, #1e90ff 0%,#4169e1 100%)
+  background: -ms-linear-gradient(left, #1e90ff 0%,#4169e1 100%)
+  background: linear-gradient(to right, #1e90ff 0%,#4169e1 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e90ff', endColorstr='#4169e1',GradientType=1 )
+
+@mixin red-linear-gradient
+  background: -webkit-linear-gradient(red, darkred)
+
+@mixin transition-animation
+  -webkit-transition: all 0.3s ease-out
+  -moz-transition: all 0.3s ease-out
+  -o-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
+
+body
+  background-image: url('creampaper.png')
+  font-family: $script
+  color: $black
+
+.container
+  width: 960px
+  margin: 0px auto
+  
+.content
+  background: white
+  min-height: 610px
+  @include grey-box-shadow
+  text-align: center
+  
+  ul
+    list-style-type: disc
+    margin-left: 20px
+  
+  a
+    color: royalblue
+
+.buffer
+  padding: 20px
+  
+  &.right.top
+    padding: 0px
+    padding-right: 20px
+    padding-top: 20px
+  
+  &.left.top
+    padding: 0px
+    padding-left: 20px
+    padding-top: 20px
+    
+  &.right.left
+    padding: 0px
+    padding-left: 20px
+    padding-right: 20px
+  
+.buffer.small
+  padding: 10px
+
+.pull-left
+  float: left
+
+.pull-right
+  float: right
+
+.center
+  text-align: center
+
+a
+  text-decoration: none
+  @include transition-animation
+
+h1
+  font-size: 20pt
+  font-weight: bold
+  margin-bottom: 10px
+
+h2
+  font-size: 18pt
+  line-height: 18pt
+  margin: 10px 0px
+
+h3
+  font-size: 16pt
+  line-height: 26pt
+  margin: 10px 0px
+  
+h4
+  font-size: 14pt
+  line-height: 24pt
+  margin: 10px 0px
+
+h5, p, li
+  font-family: $normal
+  font-size: 10pt
+  line-height: 22pt
+  margin: 10px
+  text-align: left
+
+img
+  @include border-radius-4
+  @include grey-box-shadow
+  border: 1px solid $grey
+  margin: 10px
+
+img.no-frills
+  border: none
+  @include no-box-shadow
+  margin: 0px

@@ -1,0 +1,4 @@
+$("#<%= dom_id(@piece) %>").fadeOut(0, function() {
+  $(this).html("<%= j render(@piece) %>");
+  $(this).fadeIn(500);
+});

@@ -1,0 +1,10 @@
+<% if @inquiry.errors.present? %>
+  $('.submit').val('SEND');
+  alert("Failed to send reply: <%= j @inquiry.errors.full_messages.join(', ').html_safe %>");
+<% else %>
+  $("#<%= dom_id(@inquiry) %>").fadeOut(0, function() {
+    $(this).replaceWith("<%= j render(@inquiry) %>");
+    $("#edit_<%= dom_id(@inquiry) %>").hide();
+    $(this).fadeIn(500);
+  });
+<% end %>

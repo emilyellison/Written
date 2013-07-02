@@ -1,0 +1,18 @@
+.pen
+  .sessions
+    .new
+      .buffer
+        .third.grid
+        
+          .column &nbsp;
+          
+          .column
+            .grey.wrapper
+              = form_tag pen_sessions_path do 
+                = label_tag :email
+                = text_field_tag :email
+                = label_tag :password
+                = password_field_tag :password
+                = submit_tag "Log In", class: 'submit'
+                
+          .column &nbsp;

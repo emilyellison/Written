@@ -1,0 +1,6 @@
+- if item && item.errors.any?
+  .form-errors
+    %p Whoops! Something went wrong.
+    %ul
+      - item.errors.full_messages.each do |msg|
+        %li= msg

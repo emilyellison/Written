@@ -1,0 +1,33 @@
+!!! html5
+%html
+  %head
+    %title Writ
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %link{ href: 'http://fonts.googleapis.com/css?family=Sofia', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'http://fonts.googleapis.com/css?family=Quando', rel: 'stylesheet', type: 'text/css' }    
+    
+  %body
+    - [:success, :notice, :error, :alert].each do |type|        
+      - if flash[type].present?
+        %div{ class: "flash #{type}" }
+          .container= flash[type]
+
+    %header
+      .container
+      
+        - if current_scribe
+          = link_to "WRIT", pen_root_path, class: 'brand'
+          %ul
+            %li= link_to "Pieces", pen_pieces_path
+            %li= link_to "Messages", pen_inquiries_path
+            %li= link_to "Log Out", pen_logout_path
+            .clear
+            
+        - else
+          = link_to "WRIT", root_path, class: 'brand'
+          
+    .container
+      .content        
+        = yield

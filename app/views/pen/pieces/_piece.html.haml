@@ -1,0 +1,7 @@
+.piece.pull-left{ id: dom_id(piece) }
+  .grey.small.wrapper  
+    = image_tag piece.image_url(:large), size: '245x170'
+    = form_for [ :pen, piece ], html: { class: 'small' }, remote: true do |f|
+      = f.text_field :title, placeholder: 'Title'
+      = f.text_area :description, placeholder: 'Description'
+      = f.submit "SAVE", class: 'submit'

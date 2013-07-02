@@ -1,0 +1,92 @@
+$carousel-width: 820px; /* (item width + margin) * number of times shown */
+$negative-item-width-and-margin: -820px;
+$item-width: 800px;
+$item-height: 510px;
+$item-margin: 10px;
+$arrow_margin: 205px;
+
+.carousel {
+  margin: 0px 0px 0px 0px;
+  height: $item-height;
+
+  #carousel_inner {  
+    height: $item-height;
+    float:left; /* important for inline positioning */  
+    width:$carousel-width; /* important (this width = width of list item(including margin) * items shown */  
+    overflow: hidden;  /* important (hide the items outside the div) */  
+    /* non-important styling bellow */  
+  }  
+  
+  #carousel_ul {  
+    position:relative;  
+    left:$negative-item-width-and-margin; /* important (this should be negative number of list items width(including margin) */  
+    list-style-type: none; /* removing the default styling for unordered list items */  
+    margin: 0px;  
+    padding: 10px 0px;  
+    width:9999px; /* important */  
+    /* non-important styling bellow */  
+    padding-bottom:10px;  
+  }  
+  
+  #carousel_ul li {  
+    float: left; /* important for inline positioning of the list items */  
+    width:$item-width;  /* fixed width, important */  
+    /* just styling bellow*/  
+    padding:0px;  
+    height:$item-height;  
+    background: none;  
+    margin:10px $item-margin;  
+  }  
+  
+  #carousel_ul li img {  
+    .margin-bottom:-4px; /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/  
+    /* styling */  
+    cursor:pointer;  
+    cursor: hand;  
+    border: none;
+    float: left;
+  }  
+  
+  #carousel_ul li .text_description { 
+    float: left;
+    width: 235px;
+    margin: 0px 0px 0px 20px;    
+  }
+  
+  #left_scroll, #right_scroll {  
+    float:left;  
+    height:$item-height;  
+    width:50px;  
+    opacity: 0.9;
+    cursor: pointer;  
+    @include transition-animation;
+    &:hover {
+      opacity: 0.7;
+    }
+  }  
+  
+  #left_scroll img, #right_scroll img{  
+    /*styling*/  
+    font-size: 60px;
+    color: $black;
+    cursor: hand;  
+    position: relative;
+    border: none;
+    @include no-box-shadow;
+    top: $arrow_margin;
+  }
+  
+  .description {
+    margin: 10px 20px;
+    width: 200px;
+    
+    h1 {
+      font-family: $script;
+    }
+    
+    p {
+      margin: 0px;
+    }
+  }
+
+}
