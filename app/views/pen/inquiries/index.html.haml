@@ -4,8 +4,22 @@
       .buffer
         %h1 Messages
       .thin.blue.ribbon
-      .buffer
-        - @inquiries.each do |inquiry|
-          = render 'inquiry', inquiry: inquiry
+      
+      .quarter.grid
+        .column
+          
+          .buffer.top.left
+            %ul.sub-nav
+              %li= link_to 'All Messages', pen_inquiries_path, class: "grey wrapper small #{ 'active' if params[:replied].nil? }"
+              %li= link_to 'Need Reply', pen_inquiries_path(replied: false), class: "grey wrapper small #{ 'active' if params[:replied] == 'false' }"
+              %li= link_to 'Replied', pen_inquiries_path(replied: true), class: "grey wrapper small #{ 'active' if params[:replied] == 'true' }"
         
-        = paginate @inquiries
+        .triple.column
+      
+          .buffer.top.right
+            - @inquiries.each do |inquiry|
+              = render 'inquiry', inquiry: inquiry
+        
+            = paginate @inquiries
+            
+        .clear

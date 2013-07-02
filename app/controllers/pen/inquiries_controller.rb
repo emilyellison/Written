@@ -1,7 +1,7 @@
 class Pen::InquiriesController < Pen::ApplicationController
   
   def index
-    @inquiries = Inquiry.most_recent.page(params[:page]).per(5)
+    @inquiries = Inquiry.filter_by(params).most_recent.page(params[:page]).per(5)
   end
   
   def update
