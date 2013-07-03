@@ -27,6 +27,11 @@ $normal: Quando
   -moz-box-shadow: 0px 0px 10px $dark_grey
   -webkit-box-shadow: 0px 0px 10px $dark_grey
 
+@mixin no-border-radius
+  border-radius: 0px
+  -moz-border-radius: 0px
+  -webkit-border-radius: 0px
+
 @mixin border-radius-4
   border-radius: 4px
   -moz-border-radius: 4px
@@ -73,6 +78,7 @@ body
   min-height: 610px
   @include dark_grey-box-shadow
   text-align: center
+  padding-bottom: 20px
   
   ul
     list-style-type: disc
@@ -82,7 +88,7 @@ body
       font-family: $normal
       font-size: 10pt
       line-height: 22pt
-      margin: 10px
+      margin: 10px 
       text-align: left
       
   
@@ -101,6 +107,9 @@ body
 a
   text-decoration: none
   @include transition-animation
+  
+  img:hover
+    opacity: 0.7
 
 h1
   font-size: 20pt
@@ -125,7 +134,7 @@ h5, p
   font-family: $normal
   font-size: 10pt
   line-height: 22pt
-  margin: 10px
+  margin: 10px 0px
   text-align: left
 
 img

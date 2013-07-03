@@ -1,8 +1,8 @@
 .form-errors
   background: $pink
-  padding: 20px
+  padding: 10px
   
-  p, li
+  p, ul li
     font-size: 10pt
     margin: 0px
   
@@ -20,6 +20,7 @@ input, textarea
   font-family: $normal
   width: 95%
   font-size: 10pt
+  padding: 0px 5px
   border: 1px solid $grey
   @include border-radius-4
   @include light-grey-box-shadow
@@ -27,25 +28,29 @@ input, textarea
   &:focus
     outline: none
     border: 1px solid royalblue
-
+    
 input.file_field
   border: none
   display: none
 
 textarea
-  height: 200px
+  height: 150px
 
 input.submit
   @include blue-linear-gradient
   @include transition-animation
   @include no-box-shadow
+  @include no-border-radius
   color: white
   width: 96%
-  padding: 10px 60px
+  padding: 3px 30px
   text-align: center
-  margin: 20px 0px
-  font-size: 10pt
+  margin: 10px 20px 
+  font-size: 12pt
   cursor: pointer
+  
+  &.pull-right
+    width: auto
   
   &:hover
     background: royalblue
