@@ -23,10 +23,11 @@
             %li= link_to "Pieces", pen_pieces_path
             %li= link_to "Messages", pen_inquiries_path
             %li= link_to "Log Out", pen_logout_path
-            .clear
+          .clear
             
         - else
           = link_to "WRIT", root_path, class: 'brand'
+          .clear
           
     .container
       .content        

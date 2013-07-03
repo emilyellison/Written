@@ -2,6 +2,7 @@ $black: black
 $white: white
 $grey: #aaa
 $light_grey: #eee
+$dark_grey: #444
 $pink: #FFCCCC
 $script: Sofia
 $normal: Quando
@@ -20,6 +21,11 @@ $normal: Quando
   box-shadow: 0px 0px 10px $grey
   -moz-box-shadow: 0px 0px 10px $grey
   -webkit-box-shadow: 0px 0px 10px $grey
+
+@mixin dark-grey-box-shadow
+  box-shadow: 0px 0px 10px $dark_grey
+  -moz-box-shadow: 0px 0px 10px $dark_grey
+  -webkit-box-shadow: 0px 0px 10px $dark_grey
 
 @mixin border-radius-4
   border-radius: 4px
@@ -51,7 +57,10 @@ $normal: Quando
   transition: all 0.3s ease-out
 
 body
-  background-image: url('creampaper.png')
+  background-image: url('pen.jpg')
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: 100% 100% 
   font-family: $script
   color: $black
 
@@ -60,14 +69,22 @@ body
   margin: 0px auto
   
 .content
-  background: white
+  background-image: url('creampaper.png')
   min-height: 610px
-  @include grey-box-shadow
+  @include dark_grey-box-shadow
   text-align: center
   
   ul
     list-style-type: disc
     margin-left: 20px
+    
+    li
+      font-family: $normal
+      font-size: 10pt
+      line-height: 22pt
+      margin: 10px
+      text-align: left
+      
   
   a
     color: royalblue
@@ -104,7 +121,7 @@ h4
   line-height: 24pt
   margin: 10px 0px
 
-h5, p, li
+h5, p
   font-family: $normal
   font-size: 10pt
   line-height: 22pt
