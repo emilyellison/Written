@@ -8,7 +8,7 @@ $arrow_margin: 200px;
 .carousel {
   margin: 30px 10px 10px 10px;
   height: $item-height;
-  background-image: url('ink.jpg');
+  background-image: url('grey_wash_wall.png');
   @include grey-box-shadow;
 
   #carousel_inner {  
@@ -45,8 +45,9 @@ $arrow_margin: 200px;
     /* styling */  
     cursor:pointer;  
     cursor: hand;  
-    border: none;
+    border: 1px solid $dark_grey;
     float: left;
+    @include dark_grey_box_shadow;
   }  
   
   #left_scroll, #right_scroll {  
@@ -74,7 +75,12 @@ $arrow_margin: 200px;
   }
   
   .description {
-    width: 260px;
+    width: 255px;
+    
+    .grey.wrapper {
+      @include dark_grey_box_shadow;
+      border: 1px solid $dark_grey;
+    }
     
     h1 {
       font-family: $script;
