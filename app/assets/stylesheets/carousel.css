@@ -47,12 +47,6 @@ $arrow_margin: 205px;
     float: left;
   }  
   
-  #carousel_ul li .text_description { 
-    float: left;
-    width: 235px;
-    margin: 0px 0px 0px 20px;    
-  }
-  
   #left_scroll, #right_scroll {  
     float:left;  
     height:$item-height;  
@@ -77,8 +71,7 @@ $arrow_margin: 205px;
   }
   
   .description {
-    margin: 10px 20px;
-    width: 200px;
+    width: 280px;
     
     h1 {
       font-family: $script;
