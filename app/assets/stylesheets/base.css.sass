@@ -42,6 +42,17 @@ $normal: Quando
   -moz-border-radius: 10px
   -webkit-border-radius: 10px
 
+@mixin black-linear-gradient
+  background: #111111
+  background: -moz-linear-gradient(left, #111111 0%, #333333 51%, #111111 100%)
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#111111), color-stop(51%,#333333), color-stop(100%,#111111))
+  background: -webkit-linear-gradient(left, #111111 0%,#333333 51%,#111111 100%)
+  background: -o-linear-gradient(left, #111111 0%,#333333 51%,#111111 100%)
+  background: -ms-linear-gradient(left, #111111 0%,#333333 51%,#111111 100%)
+  background: linear-gradient(to right, #111111 0%,#333333 51%,#111111 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111111', endColorstr='#111111',GradientType=1 )
+
+
 @mixin blue-linear-gradient
   background: #1e90ff
   background: -moz-linear-gradient(left, #1e90ff 0%, #4169e1 100%)

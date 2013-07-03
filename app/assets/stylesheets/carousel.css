@@ -1,13 +1,15 @@
-$carousel-width: 820px; /* (item width + margin) * number of times shown */
-$negative-item-width-and-margin: -820px;
-$item-width: 800px;
+$carousel-width: 800px; /* (item width + margin) * number of times shown */
+$negative-item-width-and-margin: -800px;
+$item-width: 780px;
 $item-height: 510px;
 $item-margin: 10px;
-$arrow_margin: 205px;
+$arrow_margin: 200px;
 
 .carousel {
-  margin: 0px 0px 0px 0px;
+  margin: 30px 10px 10px 10px;
   height: $item-height;
+  background-image: url('ink.jpg');
+  @include grey-box-shadow;
 
   #carousel_inner {  
     height: $item-height;
@@ -51,27 +53,28 @@ $arrow_margin: 205px;
     float:left;  
     height:$item-height;  
     width:50px;  
-    opacity: 0.9;
+    @include black-linear-gradient;
     cursor: pointer;  
     @include transition-animation;
     &:hover {
-      opacity: 0.7;
+      opacity: 0.9
     }
   }  
   
-  #left_scroll img, #right_scroll img{  
+  #left_scroll .arrow, #right_scroll .arrow{  
     /*styling*/  
     font-size: 60px;
-    color: $black;
+    color: $white;
     cursor: hand;  
     position: relative;
     border: none;
     @include no-box-shadow;
     top: $arrow_margin;
+    text-shadow: 0px 0px 5px $black;
   }
   
   .description {
-    width: 280px;
+    width: 260px;
     
     h1 {
       font-family: $script;
