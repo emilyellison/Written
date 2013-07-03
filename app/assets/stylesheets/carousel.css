@@ -82,8 +82,9 @@ $arrow_margin: 200px;
       border: 1px solid $dark_grey;
     }
     
-    h1 {
+    h2 {
       font-family: $script;
+      margin: 0px 0px 10px;
     }
     
     p {
