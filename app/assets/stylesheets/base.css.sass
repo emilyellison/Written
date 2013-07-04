@@ -121,8 +121,22 @@ a
   @include transition-animation
   
   img:hover
-    opacity: 0.7
+    opacity: 0.8
 
+a.btn
+  display: block
+  @include transition-animation
+  @include grey-box-shadow
+  @include no-border-radius
+  background-color: $blue
+  color: $white
+  width: 120px
+  padding: 10px 0px
+  
+  &:hover
+    background-color: $dark_blue
+    color: $white
+    
 h1
   font-size: 20pt
   font-weight: bold
@@ -152,7 +166,7 @@ h5, p
 
 img
   @include dark-grey-box-shadow
-  border: 1px solid $grey
+  border: none
   margin: 10px
 
 img.large
@@ -163,6 +177,6 @@ img.thumb
   width:  77px
 
 img.no-frills
-  border: none
   @include no-box-shadow
+  border: none
   margin: 0px

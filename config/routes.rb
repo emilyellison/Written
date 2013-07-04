@@ -13,7 +13,7 @@ Writ::Application.routes.draw do
     
   end
   
-  resources :pieces, only: [ :index ]
+  resources :pieces, only: [ :index, :show ]
   resources :inquiries, only: [ :new, :create ]
   
   root to: 'public#index'

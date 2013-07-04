@@ -1,0 +1,24 @@
+.buffer
+  %h1 Gallery
+
+.thin.blue.ribbon
+
+.third.grid
+
+  .double.column
+    .buffer.top.left
+      = image_tag(@piece.image_url, class: 'large', id: dom_id(@piece))
+                
+      .buffer.medium
+        - if @piece.previous.present?
+          .pull-left= link_to '&larr; Previous'.html_safe, piece_path(@piece.previous), class: 'btn', id: 'previous'
+        - if @piece.next.present?
+          .pull-right= link_to 'Next &rarr;'.html_safe, piece_path(@piece.next), class: 'btn', id: 'next'
+        .clear
+      
+  .column
+    .buffer.top.right
+      - @pieces.each do |piece|
+        = link_to image_tag(piece.image_url, class: 'thumb pull-left'), piece_path(piece)
+  
+  .clear
