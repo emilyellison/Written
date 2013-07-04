@@ -3,3 +3,13 @@
     .buffer
       %h1 Gallery
     .thin.blue.ribbon
+    .third.grid
+    
+      .double.column
+        .buffer.top.left
+          = image_tag(@pieces.first.image_url, class: 'large')
+          
+      .column
+        .buffer.top.right
+          - @pieces.each do |piece|
+            = image_tag(piece.image_url, class: 'thumb pull-left')
