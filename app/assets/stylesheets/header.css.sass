@@ -4,8 +4,11 @@ header
   
   a.brand
     float: left
-    color: $black    
-  
+    color: $darker_blue
+    text-shadow: 0px 0px 50px white
+    
+    &:hover
+      color: $dark_blue
   ul
     float: right
     
@@ -18,11 +21,11 @@ header
         line-height: 60pt
         font-family: $script
         color:  $black
-        background-image: url('creampaper.png')
+        background-color: #fefefe
         @include dark-grey-box-shadow
         padding: 5px 20px
-        
-        &:hover
+
+        &:hover, &.active
           color: white
           background-image: none
-          background-color: royalblue
+          background-color: $blue

@@ -15,6 +15,7 @@ $arrow_margin: 200px;
     height: $item-height;
     float:left; /* important for inline positioning */  
     width:$carousel-width; /* important (this width = width of list item(including margin) * items shown */  
+    
     overflow: hidden;  /* important (hide the items outside the div) */  
     /* non-important styling bellow */  
   }  
@@ -45,14 +46,14 @@ $arrow_margin: 200px;
     /* styling */  
     cursor:pointer;  
     cursor: hand;  
-    border: 1px solid $dark_grey;
+    border: none;
     float: left;
     @include dark_grey_box_shadow;
   }  
   
   #left_scroll, #right_scroll {  
     float:left;  
-    height:$item-height;  
+    height:$item-height;      
     width:50px;  
     @include black-linear-gradient;
     cursor: pointer;  
@@ -79,7 +80,6 @@ $arrow_margin: 200px;
     
     .grey.wrapper {
       @include dark_grey_box_shadow;
-      border: 1px solid $dark_grey;
     }
     
     h2 {

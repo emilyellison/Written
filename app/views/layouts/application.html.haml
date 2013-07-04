@@ -18,8 +18,8 @@
       .container
         = link_to "WRIT", root_path, class: 'brand'
         %ul
-          %li= link_to "Gallery", pieces_path
-          %li= link_to "Contact", new_inquiry_path
+          %li= link_to "Gallery", pieces_path, class: "#{'active' if params[:controller] == 'pieces'}"
+          %li= link_to "Contact", new_inquiry_path, class: "#{'active' if params[:controller] == 'inquiries'}"
         .clear
           
     .container
