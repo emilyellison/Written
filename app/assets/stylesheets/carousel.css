@@ -48,7 +48,7 @@ $arrow_margin: 200px;
     cursor: hand;  
     border: none;
     float: left;
-    @include dark_grey_box_shadow;
+    @include dark-grey-box-shadow;
   }  
   
   #left_scroll, #right_scroll {  
@@ -74,7 +74,7 @@ $arrow_margin: 200px;
     width: 280px;
     
     .grey.wrapper {
-      @include dark_grey_box_shadow;
+      @include dark-grey-box-shadow;
     }
     
     h2 {
