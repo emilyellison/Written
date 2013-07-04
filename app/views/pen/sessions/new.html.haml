@@ -8,11 +8,12 @@
           
           .column
             .grey.wrapper
-              = form_tag pen_sessions_path do 
+              = form_tag pen_sessions_path, class: 'sessions'  do 
                 = label_tag :email
                 = text_field_tag :email
                 = label_tag :password
                 = password_field_tag :password
-                = submit_tag "Log In", class: 'submit'
+                = submit_tag "Log In", class: 'submit pull-right'
+                .clear
                 
           .column &nbsp;

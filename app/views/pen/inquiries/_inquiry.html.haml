@@ -28,4 +28,5 @@
   
     = form_for [ :pen, inquiry ], html: { class: 'full' }, remote: true do |f|
       = f.text_area :reply
-      = f.submit 'SEND', class: 'submit'
+      = f.submit 'SEND', class: 'submit pull-right'
+      .clear

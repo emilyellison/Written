@@ -37,23 +37,26 @@ textarea
   height: 150px
 
 input.submit
-  @include blue-linear-gradient
+  background-color: $blue
+  color: $white
   @include transition-animation
   @include no-box-shadow
   @include no-border-radius
-  color: white
   width: 96%
   padding: 3px 30px
   text-align: center
   margin: 10px 20px 
   font-size: 12pt
   cursor: pointer
+  border: none
   
   &.pull-right
     width: auto
+    margin: 10px 17px
   
   &:hover
     background: $dark_blue
+    color: $white
 
 form.full
   margin: 20px 10px 10px 
@@ -62,7 +65,9 @@ form.full
     width: 99%
     
   input.submit
-    width: 99.5%
+    width: auto
+    margin: 0px
+    margin-top: 10px
 
 form.small
   input, label, textarea
@@ -76,3 +81,9 @@ form.small
   
   input.submit
     margin: 20px 10px 10px
+    
+form.sessions
+  
+  input.submit
+    margin: 0px
+    margin-top: 10px

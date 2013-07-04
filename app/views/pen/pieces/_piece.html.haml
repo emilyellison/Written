@@ -4,4 +4,5 @@
     = form_for [ :pen, piece ], html: { class: 'small' }, remote: true do |f|
       = f.text_field :title, placeholder: 'Title'
       = f.text_area :description, placeholder: 'Description'
-      = f.submit "SAVE", class: 'submit'
+      = f.submit "SAVE", class: 'submit pull-right'
+      .clear
