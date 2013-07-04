@@ -3,24 +3,3 @@
     .buffer
       %h1 Gallery
     .thin.blue.ribbon
-    .buffer.right.left
-      .carousel
-        #carousel_container
-
-          = link_to '#' do
-            #left_scroll
-              .arrow <
-
-          #carousel_inner
-            %ul#carousel_ul
-              - @pieces.each do |piece|
-                %li
-                  = image_tag(piece.image_url(:large), width: 500, height: 450, class: 'piece')
-                  .description.pull-left
-                    .grey.wrapper
-                      %h2= piece.title
-                      %p= piece.description
-                                
-          = link_to '#' do
-            #right_scroll
-              .arrow >
