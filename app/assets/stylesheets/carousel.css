@@ -1,12 +1,12 @@
-$carousel-width: 800px; /* (item width + margin) * number of times shown */
-$negative-item-width-and-margin: -800px;
-$item-width: 780px;
+$carousel-width: 820px; /* (item width + margin) * number of times shown */
+$negative-item-width-and-margin: -820px;
+$item-width: 800px;
 $item-height: 510px;
 $item-margin: 10px;
 $arrow_margin: 200px;
 
 .carousel {
-  margin: 30px 10px 10px 10px;
+  margin: 0px;
   height: $item-height;
 
   #carousel_inner {  
@@ -71,7 +71,7 @@ $arrow_margin: 200px;
   }
   
   .description {
-    width: 255px;
+    width: 280px;
     
     .grey.wrapper {
       @include dark_grey_box_shadow;
