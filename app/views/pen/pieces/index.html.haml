@@ -19,7 +19,7 @@
                 Drag and drop photos
               = render 'shared/form_errors', item: @piece
               = form_for [ :pen, Piece.new ] do |f|
-                = f.file_field :image, multiple: true, name: "piece[image]", class: 'file_field'
+                = f.file_field :image, multiple: true, name: "piece[image]", class: "#{'file_field' if !Rails.env.test? }"
               
               %script{ id: "template-upload", type: "text/x-tmpl" }
                 .upload
