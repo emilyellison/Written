@@ -18,7 +18,7 @@ input, textarea, label
 
 input, textarea
   font-family: $normal
-  width: 95%
+  width: 97%
   font-size: 10pt
   padding: 0px 5px
   border: 1px solid $grey
@@ -42,27 +42,23 @@ input.submit
   @include transition-animation
   @include no-box-shadow
   @include no-border-radius
-  width: 96%
+  width: auto
   padding: 3px 30px
   text-align: center
-  margin: 10px 20px 
+  margin: 10px 5px 
   font-size: 12pt
   cursor: pointer
   border: none
-  
-  &.pull-right
-    width: auto
-    margin: 10px 17px
   
   &:hover
     background: $dark_blue
     color: $white
 
 form.full
-  margin: 20px 10px 10px 
+  margin: 20px 0px 10px 
   
   input, label, textarea
-    width: 99%
+    width: 98%
     
   input.submit
     width: auto
@@ -80,10 +76,12 @@ form.small
     height: 50px
   
   input.submit
+    width: auto
     margin: 20px 10px 10px
-    
+
 form.sessions
-  
+  input, label
+    width: 94.5%
+    
   input.submit
-    margin: 0px
-    margin-top: 10px
+    width: auto
