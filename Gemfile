@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.10'
 
-gem 'capistrano'
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'haml-rails'
@@ -20,7 +18,6 @@ gem 'carrierwave'
 gem 'redcarpet'
 gem 'kaminari'
 gem 'balanced'
-gem 'mysql2'
 gem 'roadie'
 
 group :development, :test do
@@ -28,6 +25,11 @@ group :development, :test do
   gem "factory_girl_rails", "~> 4.2.1"
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'mysql2'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :test do
